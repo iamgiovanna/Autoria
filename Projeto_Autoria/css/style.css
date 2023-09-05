@@ -1,0 +1,120 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #904d4d;
+  }
+  
+  a {
+    color: bisque;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  a:hover {
+    opacity: 0.7;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background: #232323;
+    height: 8vh;
+  }
+  
+  .main {
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  
+  .mobile-menu {
+    cursor: pointer;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+  }
+  
+  /* Estilos para o dropdown */
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  /* Estilos para o botão do dropdown */
+  .dropdown .dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px;
+    display: flex;
+    background-color: #232323;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+  }
+  
+  /* Estilos para o botão do dropdown ao passar o mouse */
+  .dropdown:hover .dropbtn {
+    background-color: rgba(255, 228, 196, 0.822);
+  }
+  
+  /* Estilos para o conteúdo do dropdown */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Estilos para os links dentro do dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Estilos para os links do dropdown ao passar o mouse */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Mostra o conteúdo do dropdown quando o botão é clicado */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
