@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 31-Ago-2023 às 16:37
--- Versão do servidor: 10.4.20-MariaDB
--- versão do PHP: 8.0.9
+-- Tempo de geração: 24-Nov-2023 às 15:03
+-- Versão do servidor: 10.4.22-MariaDB
+-- versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -26,11 +26,9 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `autor`
 --
+CREATE DATABASE  `livro`;
 
-CREATE DATABASE `livro`;
-
-use `livro`;
-
+use  `livro`;
 
 CREATE TABLE `autor` (
   `Cod_Autor` varchar(50) NOT NULL,
@@ -72,14 +70,14 @@ CREATE TABLE `autoria` (
 --
 
 INSERT INTO `autoria` (`id_autoria`, `Codigo_Autor`, `Cod_livro`, `DataLancamento`, `Editora`) VALUES
-('', '453', '20', '10/3/2020', 'seguinte'),
-('', '777', '40', '10/03/2023', 'seguinte'),
-('', '555', '50', '10/3/2020', 'globolivros'),
-('', '9090', '50', '10/03/2024', 'seguinte'),
-('', '8080', '30', '10/3/2020', 'globolivros'),
-('', '6060', '30', '10/03/2024', 'seguinte'),
-('', '3030', '40', '10/3/2020', 'globolivros'),
-('', '000000000', '40', '10/3/2020', 'seguinte');
+('0', '453', '20', '10/3/2020', 'seguinte'),
+('1', '777', '40', '10/03/2023', 'seguinte'),
+('2', '555', '50', '10/3/2020', 'globolivros'),
+('3', '9090', '50', '10/03/2024', 'seguinte'),
+('4', '8080', '30', '10/3/2020', 'globolivros'),
+('5', '6060', '30', '10/03/2024', 'seguinte'),
+('6', '3030', '40', '10/3/2020', 'globolivros'),
+('7', '000000000', '40', '10/3/2020', 'seguinte');
 
 -- --------------------------------------------------------
 
@@ -106,6 +104,26 @@ INSERT INTO `livro` (`Cod_livro`, `Titulo`, `Categoria`, `ISBN`, `Idioma`, `Qtde
 ('30', 'A Elite', 'Romance', '499494949', 'Português', '365'),
 ('40', 'A Escolha', 'Romance', '323232', 'Português', '25222'),
 ('50', 'e não sobrou nenhum', 'suspense', '00000000000055', 'Francês', '226');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `Login` varchar(5) NOT NULL,
+  `Senha` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `usuario`
+--
+
+INSERT INTO `usuario` (`Login`, `Senha`) VALUES
+('a', 123),
+('b', 456),
+('Gi', 2213);
 
 --
 -- Índices para tabelas despejadas
